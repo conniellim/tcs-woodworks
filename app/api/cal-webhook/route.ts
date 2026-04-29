@@ -22,19 +22,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'No draft_id in metadata' }, { status: 400 })
   }
 
-  const { error } = await supabaseAdmin
+  const { data: updated, error } = await supabaseAdmin
     .from('bookings')
-    .update({
-      status: 'new',
-      cal_booking_uid: payload.payload.uid,
-      scheduled_at: payload.payload.startTime,
-    })
+    .update({ status: 'new', cal_booking_uid: payload.payload.uid, scheduled_at: payload.payload.startTime })
     .eq('id', draftId)
     .eq('status', 'pending_cal')
+    .select('id')
 
   if (error) {
     console.error('Webhook update error:', error)
     return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
+  }
+
+  if (!updated || updated.length === 0) {
+    console.warn('Webhook: no booking found to promote for draft_id:', draftId)
   }
 
   return NextResponse.json({ ok: true })

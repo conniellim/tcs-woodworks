@@ -20,7 +20,21 @@ export function StepCalendar({ draftId, customerEmail, customerName }: StepCalen
     })
   }, [])
 
-  const calLink = `${process.env.NEXT_PUBLIC_CAL_USERNAME}/${process.env.NEXT_PUBLIC_CAL_EVENT_SLUG}`
+  const calUsername = process.env.NEXT_PUBLIC_CAL_USERNAME
+  const calEventSlug = process.env.NEXT_PUBLIC_CAL_EVENT_SLUG
+
+  if (!calUsername || !calEventSlug) {
+    return (
+      <div>
+        <h2 className="text-2xl font-black text-forest mb-2">Choose a time that works for you</h2>
+        <div className="rounded border border-stone-border p-8 text-center text-sage-dark">
+          Scheduling is not yet configured. Please contact us directly to book a time.
+        </div>
+      </div>
+    )
+  }
+
+  const calLink = `${calUsername}/${calEventSlug}`
 
   return (
     <div>
