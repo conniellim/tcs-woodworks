@@ -9,6 +9,7 @@ interface ButtonProps {
   children: React.ReactNode
   className?: string
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
 export function Button({
@@ -19,6 +20,7 @@ export function Button({
   children,
   className,
   type = 'button',
+  disabled,
 }: ButtonProps) {
   const base = 'inline-flex items-center justify-center font-semibold rounded transition-colors tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2'
   const sizes = {
@@ -33,5 +35,5 @@ export function Button({
   }
   const classes = clsx(base, sizes[size], variants[variant], className)
   if (href) return <Link href={href} className={classes}>{children}</Link>
-  return <button type={type} onClick={onClick} className={classes}>{children}</button>
+  return <button type={type} onClick={onClick} disabled={disabled} className={classes}>{children}</button>
 }
