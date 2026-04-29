@@ -47,7 +47,10 @@ export default async function TeamPage() {
               </div>
             </div>
             <form action={deleteTeamMember.bind(null, member.id)}>
-              <button type="submit" className="text-xs text-red-500 hover:text-red-700 font-semibold">Remove</button>
+              <button type="submit" className="text-xs text-red-500 hover:text-red-700 font-semibold"
+                onClick={(e) => { if (!confirm(`Remove ${member.name} from the team?`)) e.preventDefault() }}>
+                Remove
+              </button>
             </form>
           </div>
         ))}

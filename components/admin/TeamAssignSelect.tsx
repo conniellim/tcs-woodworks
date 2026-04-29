@@ -14,6 +14,7 @@ export function TeamAssignSelect({ bookingId, currentMemberId, teamMembers }: Te
   const [isPending, startTransition] = useTransition()
   return (
     <select
+      key={currentMemberId ?? ''}
       defaultValue={currentMemberId ?? ''}
       disabled={isPending}
       onChange={(e) =>

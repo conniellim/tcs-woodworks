@@ -49,7 +49,10 @@ export default async function ServicesPage() {
                 </button>
               </form>
               <form action={deleteCategory.bind(null, cat.id)}>
-                <button type="submit" className="text-xs text-red-500 hover:text-red-700 font-semibold">Delete</button>
+                <button type="submit" className="text-xs text-red-500 hover:text-red-700 font-semibold"
+                  onClick={(e) => { if (!confirm('Delete this category? This cannot be undone.')) e.preventDefault() }}>
+                  Delete
+                </button>
               </form>
             </div>
           </div>

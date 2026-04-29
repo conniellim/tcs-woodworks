@@ -47,7 +47,8 @@ export default async function PortfolioPage() {
             <form action={deletePortfolioPhoto.bind(null, photo.id)}
               className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
               <button type="submit" className="w-6 h-6 bg-red-500 text-white rounded-full text-xs font-bold"
-                aria-label="Delete photo">
+                aria-label="Delete photo"
+                onClick={(e) => { if (!confirm('Delete this photo?')) e.preventDefault() }}>
                 ✕
               </button>
             </form>

@@ -22,6 +22,7 @@ export function StatusSelect({ bookingId, current }: StatusSelectProps) {
   const [isPending, startTransition] = useTransition()
   return (
     <select
+      key={current}
       defaultValue={current}
       disabled={isPending}
       onChange={(e) =>

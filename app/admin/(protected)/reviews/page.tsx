@@ -60,7 +60,10 @@ export default async function ReviewsPage() {
                   </button>
                 </form>
                 <form action={deleteReview.bind(null, r.id)}>
-                  <button type="submit" className="text-xs text-red-500 hover:text-red-700">Delete</button>
+                  <button type="submit" className="text-xs text-red-500 hover:text-red-700"
+                    onClick={(e) => { if (!confirm('Delete this review?')) e.preventDefault() }}>
+                    Delete
+                  </button>
                 </form>
               </div>
             </div>
