@@ -42,3 +42,8 @@ next-env.d.ts
 
 # claude
 .superpowers/
+
+# Supabase local dev
+.supabase/
+supabase/.branches/
+supabase/.temp/
