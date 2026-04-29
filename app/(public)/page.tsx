@@ -1,8 +1,19 @@
-// app/(public)/page.tsx
+import { Hero } from '@/components/home/Hero'
+import { PhotoStrip } from '@/components/home/PhotoStrip'
+import { MissionSection } from '@/components/home/MissionSection'
+import { ServicesPreview } from '@/components/home/ServicesPreview'
+import { TestimonialsSection } from '@/components/home/TestimonialsSection'
+import { BookingCTA } from '@/components/home/BookingCTA'
+
 export default function HomePage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-black text-forest">Coming Soon</h1>
-    </div>
+    <>
+      <Hero />
+      <PhotoStrip />
+      <MissionSection />
+      <ServicesPreview />
+      <TestimonialsSection />
+      <BookingCTA />
+    </>
   )
 }
