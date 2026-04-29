@@ -1,7 +1,8 @@
 import NextAuth from 'next-auth'
 import Google from 'next-auth/providers/google'
 
-const adminEmail = process.env.ADMIN_EMAIL!
+const adminEmail = process.env.ADMIN_EMAIL
+if (!adminEmail) throw new Error('ADMIN_EMAIL env var is required')
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
