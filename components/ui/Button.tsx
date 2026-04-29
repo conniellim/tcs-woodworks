@@ -20,7 +20,7 @@ export function Button({
   className,
   type = 'button',
 }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center font-semibold rounded transition-colors tracking-wide'
+  const base = 'inline-flex items-center justify-center font-semibold rounded transition-colors tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2'
   const sizes = {
     sm: 'px-4 py-2 text-xs',
     md: 'px-6 py-3 text-sm',

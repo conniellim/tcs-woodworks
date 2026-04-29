@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { supabase } from '@/lib/supabase'
 
@@ -32,16 +33,16 @@ export default async function PortfolioPage({
         <h1 className="text-4xl md:text-5xl font-black text-forest tracking-tight">Portfolio</h1>
       </div>
       <div className="flex gap-3 flex-wrap mb-12">
-        <a
+        <Link
           href="/portfolio"
           className={`px-4 py-2 rounded text-sm font-semibold transition-colors ${
             !params.category ? 'bg-forest text-stone' : 'bg-stone-mid text-sage-dark hover:bg-stone-border'
           }`}
         >
           All
-        </a>
+        </Link>
         {(categories ?? []).map((cat) => (
-          <a
+          <Link
             key={cat.id}
             href={`/portfolio?category=${cat.id}`}
             className={`px-4 py-2 rounded text-sm font-semibold transition-colors ${
@@ -51,7 +52,7 @@ export default async function PortfolioPage({
             }`}
           >
             {cat.name}
-          </a>
+          </Link>
         ))}
       </div>
       {photos && photos.length > 0 ? (

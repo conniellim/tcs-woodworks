@@ -23,7 +23,7 @@ export async function ServicesPreview() {
             <div key={cat.id} className="bg-stone-mid rounded overflow-hidden group">
               <div className="relative aspect-video bg-stone-muted">
                 {cat.cover_image_url ? (
-                  <Image src={cat.cover_image_url} alt={cat.name} fill className="object-cover" />
+                  <Image src={cat.cover_image_url} alt={cat.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 ) : (
                   <div className="absolute inset-0 bg-stone-muted" />
                 )}

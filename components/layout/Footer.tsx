@@ -14,7 +14,7 @@ export function Footer() {
             { href: '#', label: 'Facebook' },
           ].map(({ href, label }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-              className="text-xs text-sage-deeper hover:text-sage transition-colors">
+              className="text-xs text-sage-deeper hover:text-sage transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2 rounded">
               {label}
             </a>
           ))}

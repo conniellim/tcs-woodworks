@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { Button } from '@/components/ui/Button'
 import { supabase } from '@/lib/supabase'
@@ -50,10 +51,15 @@ export default async function AboutPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member) => (
                 <div key={member.id} className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-stone-muted mx-auto mb-4 overflow-hidden">
+                  <div className="relative w-20 h-20 rounded-full bg-stone-muted mx-auto mb-4 overflow-hidden">
                     {member.avatar_url && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={member.avatar_url} alt={member.name} className="w-full h-full object-cover" />
+                      <Image
+                        src={member.avatar_url}
+                        alt={member.name}
+                        fill
+                        sizes="80px"
+                        className="w-full h-full object-cover"
+                      />
                     )}
                   </div>
                   <h3 className="font-bold text-forest">{member.name}</h3>
