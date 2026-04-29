@@ -14,9 +14,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async signIn({ user }) {
       return user.email === adminEmail
     },
-    async session({ session, token }) {
-      return session
-    },
   },
   pages: {
     signIn: '/admin/login',
