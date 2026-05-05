@@ -2,7 +2,7 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 
 const STATS = [
   { value: '25+', label: 'Years Experience' },
-  { value: '3', label: 'Generations of Craft' },
+  { value: 'Bay Area', label: 'Based & Serving' },
   { value: '100%', label: 'Client-Oriented' },
 ]
 
@@ -16,8 +16,8 @@ export function MissionSection() {
         </h2>
         <p className="text-sage-deeper text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
           Established in 2001, The Carpenter&apos;s Son takes pride in delivering high-quality products
-          and personal service backed by over three generations of master craftsmanship. We take the
-          time to listen — because attention to detail starts with understanding exactly what you need.
+          and personal service. We take the time to listen — because attention to detail starts with
+          understanding exactly what you need.
         </p>
         <div className="flex justify-center gap-16">
           {STATS.map(({ value, label }) => (

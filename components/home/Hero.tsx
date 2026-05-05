@@ -11,7 +11,7 @@ export function Hero() {
           Built by Hand.<br />Built to Last.
         </h1>
         <p className="text-sage text-base md:text-lg mb-8 max-w-lg">
-          Three generations of master craftsmanship. Custom cabinetry and full-service construction across the Bay Area.
+          Custom cabinetry and full-service construction across the Bay Area, since 2001.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button href="/book" size="lg" variant="ghost">

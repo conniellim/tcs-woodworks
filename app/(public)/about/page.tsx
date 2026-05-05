@@ -18,8 +18,8 @@ export default async function AboutPage() {
           </h1>
           <p className="text-sage text-lg leading-relaxed">
             Established in 2001, The Carpenter&apos;s Son is proud to serve the Bay Area with
-            high-quality custom cabinetry and carpentry backed by over three generations of master
-            craftsmanship. We are client-oriented from the very first conversation to the final walkthrough.
+            high-quality custom cabinetry and carpentry. We are client-oriented from the very first
+            conversation to the final walkthrough.
           </p>
         </div>
       </section>
