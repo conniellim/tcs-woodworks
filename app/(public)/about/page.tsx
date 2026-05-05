@@ -17,9 +17,9 @@ export default async function AboutPage() {
             A Family Trade, Perfected Over Generations
           </h1>
           <p className="text-sage text-lg leading-relaxed">
-            The Carpenter&apos;s Son was founded on a simple belief: that great work speaks for itself.
-            Based in Hayward, CA, we&apos;ve been building custom carpentry and construction projects
-            for Bay Area families and businesses since 2005.
+            Established in 2001, The Carpenter&apos;s Son is proud to serve the Bay Area with
+            high-quality custom cabinetry and carpentry backed by over three generations of master
+            craftsmanship. We are client-oriented from the very first conversation to the final walkthrough.
           </p>
         </div>
       </section>
@@ -28,9 +28,9 @@ export default async function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { title: 'Craftsmanship', body: "Every cut, joint, and finish is executed with precision. We don't rush. We don't cut corners." },
-              { title: 'Transparency', body: 'Clear estimates, honest timelines, and direct communication from first call to final walkthrough.' },
-              { title: 'Longevity', body: 'We build things that last decades, not years. Materials, methods, and workmanship chosen for the long run.' },
+              { title: 'We Listen First', body: 'Providing good service means taking the time to listen. Patience is a requirement to understanding the desired outcome — we never skip this step.' },
+              { title: 'Attention to Detail', body: 'Attention to detail is a major contributor to our production. Every cut, joint, and finish is executed with the precision the work demands.' },
+              { title: 'Client-Oriented', body: 'We will work with you every step of the way to make sure you receive the services you need and a product that fits your environment perfectly.' },
             ].map(({ title, body }) => (
               <div key={title}>
                 <h3 className="text-lg font-black text-forest mb-3">{title}</h3>

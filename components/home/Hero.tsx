@@ -6,12 +6,12 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest-dark/80" />
       <div className="absolute inset-0 bg-forest-light opacity-30" />
       <div className="relative z-10 max-w-6xl mx-auto w-full">
-        <p className="text-xs text-sage tracking-[0.25em] uppercase mb-4">Hayward, CA · Est. 2005</p>
+        <p className="text-xs text-sage tracking-[0.25em] uppercase mb-4">Hayward, CA · Est. 2001</p>
         <h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-4">
           Built by Hand.<br />Built to Last.
         </h1>
         <p className="text-sage text-base md:text-lg mb-8 max-w-lg">
-          Custom carpentry & full-service construction. Every project built with care, precision, and pride.
+          Three generations of master craftsmanship. Custom cabinetry and full-service construction across the Bay Area.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button href="/book" size="lg" variant="ghost">

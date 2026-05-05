@@ -1,9 +1,9 @@
 import { SectionLabel } from '@/components/ui/SectionLabel'
 
 const STATS = [
-  { value: '15+', label: 'Years Experience' },
-  { value: '200+', label: 'Projects Completed' },
-  { value: '5★', label: 'Yelp Rating' },
+  { value: '25+', label: 'Years Experience' },
+  { value: '3', label: 'Generations of Craft' },
+  { value: '100%', label: 'Client-Oriented' },
 ]
 
 export function MissionSection() {
@@ -15,9 +15,9 @@ export function MissionSection() {
           A Family Trade, Perfected Over Generations
         </h2>
         <p className="text-sage-deeper text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
-          From custom furniture to full home additions, we bring the same dedication to craft
-          whether the job is small or large. Every project is personal — we work directly with
-          you from first sketch to final nail.
+          Established in 2001, The Carpenter&apos;s Son takes pride in delivering high-quality products
+          and personal service backed by over three generations of master craftsmanship. We take the
+          time to listen — because attention to detail starts with understanding exactly what you need.
         </p>
         <div className="flex justify-center gap-16">
           {STATS.map(({ value, label }) => (
