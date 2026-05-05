@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { TCSLogo } from '@/components/ui/TCSLogo'
 
 export function Nav() {
   return (
     <nav className="bg-stone border-b border-stone-border sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-sm font-black text-forest tracking-[0.2em] uppercase">
-          The Carpenter&apos;s Son
+        <Link href="/" className="flex items-center gap-3">
+          <TCSLogo size={36} />
+          <span className="text-sm font-black text-forest tracking-[0.2em] uppercase">
+            The Carpenter&apos;s Son
+          </span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
           {[
