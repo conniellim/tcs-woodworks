@@ -3,6 +3,28 @@ import Link from 'next/link'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { supabase } from '@/lib/supabase'
 
+const PHOTOS_FALLBACK = [
+  { id: '1',  image_url: '/photos/custom-kitchen-cabs.jpg',           caption: 'Custom kitchen cabinets' },
+  { id: '2',  image_url: '/photos/entertainment-wall.jpg',            caption: 'Entertainment wall' },
+  { id: '3',  image_url: '/photos/kitchen-remodel.jpg',              caption: 'Kitchen remodel' },
+  { id: '4',  image_url: '/photos/cabinetry.jpg',                    caption: 'Custom cabinetry' },
+  { id: '5',  image_url: '/photos/bathroom.jpg',                     caption: 'Bathroom remodel' },
+  { id: '6',  image_url: '/photos/custom-cabinet.jpg',               caption: 'Custom cabinet' },
+  { id: '7',  image_url: '/photos/custom-vanity-cabinet.jpg',        caption: 'Custom vanity cabinet' },
+  { id: '8',  image_url: '/photos/wine-cabinet.jpg',                 caption: 'Wine cabinet' },
+  { id: '9',  image_url: '/photos/slide-out-pantry.jpg',             caption: 'Slide-out pantry' },
+  { id: '10', image_url: '/photos/built-in-entertainment-center.jpg',caption: 'Built-in entertainment center' },
+  { id: '11', image_url: '/photos/fence-and-landscaping.jpg',        caption: 'Fence and landscaping' },
+  { id: '12', image_url: '/photos/kitchen.jpg',                      caption: 'Kitchen' },
+  { id: '13', image_url: '/photos/kitchen-install.jpg',              caption: 'Kitchen installation' },
+  { id: '14', image_url: '/photos/fireplace.jpg',                    caption: 'Fireplace build' },
+  { id: '15', image_url: '/photos/commercial.jpg',                   caption: 'Commercial project' },
+  { id: '16', image_url: '/photos/metal-work.jpg',                   caption: 'Metal work' },
+  { id: '17', image_url: '/photos/table-restoration.jpg',            caption: 'Table restoration' },
+  { id: '18', image_url: '/photos/process.jpg',                      caption: 'Project in progress' },
+  { id: '19', image_url: '/photos/process-2.jpg',                    caption: 'Project in progress' },
+]
+
 export default async function PortfolioPage({
   searchParams,
 }: {
@@ -24,7 +46,8 @@ export default async function PortfolioPage({
     photosQuery = photosQuery.eq('category_id', params.category)
   }
 
-  const { data: photos } = await photosQuery
+  const { data: photosData } = await photosQuery
+  const photos = (photosData && photosData.length > 0) ? photosData : PHOTOS_FALLBACK
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-20">
@@ -55,7 +78,7 @@ export default async function PortfolioPage({
           </Link>
         ))}
       </div>
-      {photos && photos.length > 0 ? (
+      {photos.length > 0 ? (
         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
           {photos.map((photo) => (
             <div key={photo.id} className="break-inside-avoid rounded overflow-hidden bg-stone-mid">

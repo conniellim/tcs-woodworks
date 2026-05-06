@@ -3,6 +3,12 @@ import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 
+const SERVICES_FALLBACK = [
+  { id: '1', name: 'Custom Furniture & Cabinetry', description: 'Handcrafted built-ins, cabinets, and custom furniture pieces tailored to your space.', cover_image_url: '/photos/cabinetry.jpg' },
+  { id: '2', name: 'Deck & Outdoor Structures',    description: 'Decks, pergolas, fences, and outdoor living spaces built to last.',                  cover_image_url: '/photos/fence-and-landscaping.jpg' },
+  { id: '3', name: 'Home Additions & Remodels',    description: 'Room additions and full-service renovations, from design to final walkthrough.',        cover_image_url: '/photos/kitchen-remodel.jpg' },
+]
+
 export async function ServicesPreview() {
   const { data: categories } = await supabase
     .from('service_categories')
@@ -10,6 +16,8 @@ export async function ServicesPreview() {
     .eq('visible', true)
     .order('sort_order')
     .limit(3)
+
+  const items = (categories && categories.length > 0) ? categories : SERVICES_FALLBACK
 
   return (
     <section className="py-20 px-6 bg-stone">
@@ -19,7 +27,7 @@ export async function ServicesPreview() {
           <h2 className="text-3xl md:text-4xl font-black text-forest tracking-tight">Every Job, Done Right</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {(categories ?? []).map((cat) => (
+          {items.map((cat) => (
             <div key={cat.id} className="bg-stone-mid rounded overflow-hidden group">
               <div className="relative aspect-video bg-stone-muted">
                 {cat.cover_image_url ? (

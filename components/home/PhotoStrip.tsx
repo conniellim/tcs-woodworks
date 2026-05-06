@@ -1,11 +1,11 @@
 import { supabase } from '@/lib/supabase'
 import Image from 'next/image'
 
-const STRIP_LABELS = [
-  'Custom Furniture & Cabinetry',
-  'Deck & Outdoor Structures',
-  'Home Additions & Remodels',
-  'Finish Carpentry & Trim',
+const STRIP_FALLBACK = [
+  { name: 'Custom Furniture & Cabinetry', cover_image_url: '/photos/cabinetry.jpg' },
+  { name: 'Deck & Outdoor Structures',    cover_image_url: '/photos/fence-and-landscaping.jpg' },
+  { name: 'Home Additions & Remodels',    cover_image_url: '/photos/kitchen-remodel.jpg' },
+  { name: 'Finish Carpentry & Trim',      cover_image_url: '/photos/built-in-entertainment-center.jpg' },
 ]
 
 export async function PhotoStrip() {
@@ -16,7 +16,7 @@ export async function PhotoStrip() {
     .order('sort_order')
     .limit(4)
 
-  const items = categories ?? STRIP_LABELS.map((name) => ({ name, cover_image_url: null }))
+  const items = (categories && categories.length > 0) ? categories : STRIP_FALLBACK
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-0.5 bg-stone-border">
