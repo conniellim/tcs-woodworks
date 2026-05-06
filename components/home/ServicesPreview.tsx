@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 
 const SERVICES_FALLBACK = [
-  { id: '1', name: 'Custom Furniture & Cabinetry', description: 'Handcrafted built-ins, cabinets, and custom furniture pieces tailored to your space.', cover_image_url: '/photos/cabinetry.jpg' },
+  { id: '1', name: 'Custom Furniture & Cabinetry', description: 'Handcrafted built-ins, cabinets, and custom furniture pieces tailored to your space.', cover_image_url: '/photos/entertainment-wall.jpg' },
   { id: '2', name: 'Fencing & Landscaping',    description: 'Decks, pergolas, fences, and outdoor living spaces built to last.',                  cover_image_url: '/photos/fence-and-landscaping.jpg' },
   { id: '3', name: 'Home Additions & Remodels',    description: 'Room additions and full-service renovations, from design to final walkthrough.',        cover_image_url: '/photos/kitchen-remodel.jpg' },
 ]

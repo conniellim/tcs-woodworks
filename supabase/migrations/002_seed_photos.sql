@@ -3,7 +3,7 @@
 -- Image URLs reference /photos/* served from the Vercel public folder.
 
 -- Cover images for service categories
-UPDATE service_categories SET cover_image_url = '/photos/cabinetry.jpg'              WHERE name = 'Custom Furniture & Cabinetry';
+UPDATE service_categories SET cover_image_url = '/photos/entertainment-wall.jpg'      WHERE name = 'Custom Furniture & Cabinetry';
 UPDATE service_categories SET cover_image_url = '/photos/fence-and-landscaping.jpg'  WHERE name = 'Fencing & Landscaping';
 UPDATE service_categories SET cover_image_url = '/photos/kitchen-remodel.jpg'        WHERE name = 'Home Additions & Remodels';
 UPDATE service_categories SET cover_image_url = '/photos/built-in-entertainment-center.jpg' WHERE name = 'Finish Carpentry & Trim';
