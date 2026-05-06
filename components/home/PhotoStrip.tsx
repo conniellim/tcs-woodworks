@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const STRIP_FALLBACK = [
   { name: 'Custom Furniture & Cabinetry', cover_image_url: '/photos/cabinetry.jpg' },
-  { name: 'Deck & Outdoor Structures',    cover_image_url: '/photos/fence-and-landscaping.jpg' },
+  { name: 'Fence & Landscaping',    cover_image_url: '/photos/fence-and-landscaping.jpg' },
   { name: 'Home Additions & Remodels',    cover_image_url: '/photos/kitchen-remodel.jpg' },
   { name: 'Finish Carpentry & Trim',      cover_image_url: '/photos/built-in-entertainment-center.jpg' },
 ]

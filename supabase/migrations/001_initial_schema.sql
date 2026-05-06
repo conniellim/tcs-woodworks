@@ -55,7 +55,7 @@ create table testimonials (
 -- Seed service categories
 insert into service_categories (name, description, sort_order) values
   ('Custom Furniture & Cabinetry', 'Handcrafted built-ins, cabinets, and custom furniture pieces tailored to your space.', 1),
-  ('Deck & Outdoor Structures', 'Decks, pergolas, fences, and outdoor living spaces built to last.', 2),
+  ('Fence & Landscaping', 'Fencing, gates, and landscaping structures built to complement your property.', 2),
   ('Home Additions & Remodels', 'Room additions and full-service renovations, from design to final walkthrough.', 3),
   ('Finish Carpentry & Trim', 'Crown molding, baseboards, door casings, stair railings, and detail work.', 4),
   ('Full Construction Projects', 'New builds and large-scale construction managed start to finish.', 5),
