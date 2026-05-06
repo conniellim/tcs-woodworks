@@ -4,7 +4,7 @@
 
 -- Cover images for service categories
 UPDATE service_categories SET cover_image_url = '/photos/cabinetry.jpg'              WHERE name = 'Custom Furniture & Cabinetry';
-UPDATE service_categories SET cover_image_url = '/photos/fence-and-landscaping.jpg'  WHERE name = 'Fence & Landscaping';
+UPDATE service_categories SET cover_image_url = '/photos/fence-and-landscaping.jpg'  WHERE name = 'Fencing & Landscaping';
 UPDATE service_categories SET cover_image_url = '/photos/kitchen-remodel.jpg'        WHERE name = 'Home Additions & Remodels';
 UPDATE service_categories SET cover_image_url = '/photos/built-in-entertainment-center.jpg' WHERE name = 'Finish Carpentry & Trim';
 UPDATE service_categories SET cover_image_url = '/photos/commercial.jpg'             WHERE name = 'Full Construction Projects';
@@ -20,7 +20,7 @@ INSERT INTO portfolio_photos (image_url, category_id, caption) VALUES
   ('/photos/slide-out-pantry.jpg',             (SELECT id FROM service_categories WHERE name = 'Custom Furniture & Cabinetry'), 'Slide-out pantry'),
   ('/photos/built-in-entertainment-center.jpg',(SELECT id FROM service_categories WHERE name = 'Custom Furniture & Cabinetry'), 'Built-in entertainment center'),
   ('/photos/entertainment-wall.jpg',           (SELECT id FROM service_categories WHERE name = 'Custom Furniture & Cabinetry'), 'Entertainment wall'),
-  ('/photos/fence-and-landscaping.jpg',        (SELECT id FROM service_categories WHERE name = 'Fence & Landscaping'),   'Fence and landscaping'),
+  ('/photos/fence-and-landscaping.jpg',        (SELECT id FROM service_categories WHERE name = 'Fencing & Landscaping'),   'Fence and landscaping'),
   ('/photos/kitchen.jpg',                      (SELECT id FROM service_categories WHERE name = 'Home Additions & Remodels'),   'Kitchen'),
   ('/photos/kitchen-install.jpg',              (SELECT id FROM service_categories WHERE name = 'Home Additions & Remodels'),   'Kitchen installation'),
   ('/photos/kitchen-remodel.jpg',              (SELECT id FROM service_categories WHERE name = 'Home Additions & Remodels'),   'Kitchen remodel'),
